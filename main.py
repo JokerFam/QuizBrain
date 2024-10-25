@@ -16,3 +16,5 @@ while run:
         run = quizz.still_has_a_question()
     except IndexError as e:
         run = False
+
+quizz.report()
