@@ -8,8 +8,9 @@ class QuizBrain(object):
             f'Q.{self.question_number}: {self.question_list[self.question_number-1].question} (True/False)? ')
 
     def still_has_a_question(self):
-        if len(self.question_number) == (self.question_number-1):
+        if len(self.question_list) == (self.question_number-1):
             return False
         else:
+            self.quiz()
             self.question_number += 1
             return True
