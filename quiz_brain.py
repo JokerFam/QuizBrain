@@ -4,5 +4,12 @@ class QuizBrain(object):
         self.question_list = q_list
 
     def quiz(self):
-        ans = input(
-            f'Q{self.question_number}. {self.question_list[self.question_number-1]} (True/False)')
+        input(
+            f'Q.{self.question_number}: {self.question_list[self.question_number-1].question} (True/False)? ')
+
+    def still_has_a_question(self):
+        if len(self.question_number) == (self.question_number-1):
+            return False
+        else:
+            self.question_number += 1
+            return True
